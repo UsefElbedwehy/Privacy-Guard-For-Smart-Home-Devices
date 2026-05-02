@@ -24,7 +24,7 @@ enum ModelRiskFactor: String, CaseIterable, Identifiable {
             return "🧠 User Awareness"
         }
     }
-    
+
     var shortTitle: String {
         switch self {
         case .dataSensitivity:
@@ -44,14 +44,14 @@ enum ModelRiskFactor: String, CaseIterable, Identifiable {
             case .medium: return "Profile Info"
             case .high: return "Private Data"
             }
-            
+
         case .networkExposure:
             switch level {
             case .low: return "Local Only"
             case .medium: return "Limited"
             case .high: return "Full Internet"
             }
-            
+
         case .userAwarenes:
             switch level {
             case .low: return "Not Aware"
@@ -60,14 +60,14 @@ enum ModelRiskFactor: String, CaseIterable, Identifiable {
             }
         }
     }
-    
+
     func score(for level: ModelRisk) -> Int {
         switch self {
         case .userAwarenes:
             switch level {
-            case .low:    return 3
+            case .low: return 3
             case .medium: return 2
-            case .high:   return 1
+            case .high: return 1
             }
         default:
             return level.score
