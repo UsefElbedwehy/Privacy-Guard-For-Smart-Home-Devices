@@ -83,11 +83,11 @@ struct DeviceRow: View {
 #Preview {
     VStack {
         DeviceRow(
-            device: .init(name: "Smart Phone", risk: .high, emoji: "📱"),
+            device: .speaker,
             isSelected: true
         )
         DeviceRow(
-            device: .init(name: "Smart Phone", risk: .high, emoji: "📱"),
+            device: .camera,
             isSelected: false
         )
     }

@@ -37,6 +37,7 @@ struct SelectableCard: View {
                     lineWidth: 1
                 )
         }
+        .animation(.spring(response: 0.3), value: isSelected)
     }
 }
 

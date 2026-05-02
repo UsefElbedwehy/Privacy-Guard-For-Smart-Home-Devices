@@ -159,11 +159,7 @@ struct ResultView: View {
 #Preview {
     ResultView(
         viewModel: ResultViewModel(
-            device: .init(
-                name: "Smart",
-                risk: .low,
-                emoji: ""
-            ),
+            device: .camera,
             factorLevels: [
                 .userAwarenes: .high,
                 .networkExposure: .medium,
